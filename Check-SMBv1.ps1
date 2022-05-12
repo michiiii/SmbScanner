@@ -368,7 +368,7 @@ namespace PingCastle.Scanners
 			{
 				isPortOpened = false;
 			}
-			return computer + " has SMBv1 " + (SMBv1 ? "Enabled" : "Disabled");
+			return computer + " " + (isPortOpened ? "uses SMB" : "does not use SMB") + " and has SMBv1 " + (SMBv1 ? "Enabled" : "Disabled");
 		}
 		
         public static void GetCsv(string computer)
