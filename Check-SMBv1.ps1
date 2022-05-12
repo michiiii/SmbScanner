@@ -367,7 +367,12 @@ namespace PingCastle.Scanners
 			{
 				Console.WriteLine("ASD");
 			}
-			return computer + " has SMBv1 " + (SMBv1 ? "Enabled" : "Disabled");
+			if(SMBv1){
+				return computer + " has SMBv1 enabled";
+			}else{
+				return computer + " has SMBv1 disabled";
+			}
+			
 		}
 		
         public static void GetCsv(string computer)
