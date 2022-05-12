@@ -389,6 +389,7 @@ namespace PingCastle.Scanners
             }
 	    Console.WriteLine(GetCsvData(computer));
 	}
+	}
 }
 "@
 Add-Type -TypeDefinition $Source
