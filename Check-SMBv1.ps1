@@ -377,8 +377,17 @@ namespace PingCastle.Scanners
 		
         public static void GetCsv(string computer)
         {
-            Console.WriteLine(GetCsvData(computer));
-        }
+	    result=GetCsvData(computer)
+            
+	    if (result.Contains("enabled"))
+            {
+                Console.WriteLine("String contains the word enabled");
+            }
+            else
+            {
+                Console.WriteLine("String does not contain the word enabled");
+            }
+	    Console.WriteLine(GetCsvData(computer));
 	}
 }
 "@
