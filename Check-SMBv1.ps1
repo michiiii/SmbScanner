@@ -336,7 +336,6 @@ namespace PingCastle.Scanners
 
 		public static string GetCsvData(string computer)
 		{
-			bool isPortOpened = true;
 			bool SMBv1 = false;
 			bool SMBv2_0x0202 = false;
 			bool SMBv2_0x0210 = false;
@@ -366,9 +365,9 @@ namespace PingCastle.Scanners
 			}
 			catch (Exception)
 			{
-				isPortOpened = false;
+				Console.WriteLine("ASD");
 			}
-			return computer + " " + (isPortOpened ? "uses SMB" : "does not use SMB") + " and has SMBv1 " + (SMBv1 ? "Enabled" : "Disabled");
+			return computer + " has SMBv1 " + (SMBv1 ? "Enabled" : "Disabled");
 		}
 		
         public static void GetCsv(string computer)
