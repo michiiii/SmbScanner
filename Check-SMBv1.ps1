@@ -334,7 +334,7 @@ namespace PingCastle.Scanners
 			return "Computer\tSMB Port Open\tSMB1(NT LM 0.12)\tSMB2(0x0202)\tSMB2(0x0210)\tSMB3(0x0300)\tSMB3(0x0302)\tSMB3(0x0311)";
 		}
 
-		public static string GetCsvData(string computer)
+		public static string CheckSMBv1(string computer)
 		{
 			bool SMBv1 = false;
 			bool SMBv2_0x0202 = false;
