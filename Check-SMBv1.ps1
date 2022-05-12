@@ -380,7 +380,3 @@ namespace PingCastle.Scanners
 "@
 Add-Type -TypeDefinition $Source
 
-# Run example:
-function Check-SMBv1{
-	[PingCastle.Scanners.SmbScanner]::GetCsv("192.168.0.25")
-}
