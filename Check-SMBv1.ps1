@@ -368,17 +368,11 @@ namespace PingCastle.Scanners
 			{
 				isPortOpened = false;
 			}
-			return computer + "\t" + (isPortOpened ? "Yes" : "No") + "\t" + (SMBv1 ? "Yes" : "No")
-															+ "\t" + (SMBv2_0x0202 ? "Yes" : "No")
-															+ "\t" + (SMBv2_0x0210 ? "Yes" : "No")
-															+ "\t" + (SMBv2_0x0300 ? "Yes" : "No")
-															+ "\t" + (SMBv2_0x0302 ? "Yes" : "No")
-															+ "\t" + (SMBv2_0x0311 ? "Yes" : "No");
+			return computer + " has SMBv1 " + (SMBv1 ? "Enabled" : "Disabled");
 		}
 		
         public static void GetCsv(string computer)
         {
-            Console.WriteLine(GetCsvHeader());
             Console.WriteLine(GetCsvData(computer));
         }
 	}
@@ -387,4 +381,6 @@ namespace PingCastle.Scanners
 Add-Type -TypeDefinition $Source
 
 # Run example:
-# [PingCastle.Scanners.SmbScanner]::GetCsv("192.168.0.25")
+function Check-SMBv1{
+	[PingCastle.Scanners.SmbScanner]::GetCsv("192.168.0.25")
+}
